@@ -45,7 +45,7 @@ To load the fine-tuned model, run:\
 ```new_state_dict = dict()```\
 ```for key in state_dict:```\
 ```    new_state_dict[key.replace("model.", "")] = state_dict[key]```\
-```model.load_state_dict(new_state_dict)```\
+```model.load_state_dict(new_state_dict)```
 
 ### Task 4
 
