@@ -1,0 +1,6 @@
+# Python things
+__pycache__/
+*.py[cod]
+
+# PyTorch-Lightning things
+lightning_logs/

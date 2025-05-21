@@ -1,0 +1,2 @@
+pre-trained WER = 10.815957228666601 %
+fine-tuned WER = 7.786390688393867 %
