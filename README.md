@@ -33,6 +33,10 @@ It then possible to submit API calls to the running Docker API, by running on th
 
 ### Task 3b
 
+The fine-tuned model checkpoint saved as wav2vec2-large-960h-cv.ckpt by the Jupyter notebook is too large to fit in Github. Therefore, I first reduce the size by extracting out the state_dict of the model parameters and save it into wav2vec2-large-960h-cv.pt. Then, I upload to OneDrive, instead of Github.\
+\
+The fine-tuned model checkpoint can be downloaded from https://1drv.ms/f/c/52518ca9cf60839e/EmUNHf2pOZ9Lp9uwU-sCafYBO_uUNEbF4njQ0qhrmsxV7w?e=VSmIsz \
+\
 To load the fine-tuned model, run:\
 ```from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor```\
 ```model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-large-960h")```\
@@ -42,8 +46,6 @@ To load the fine-tuned model, run:\
 ```for key in state_dict:```\
 ```    new_state_dict[key.replace("model.", "")] = state_dict[key]```\
 ```model.load_state_dict(new_state_dict)```\
-\
-The fine-tuned model checkpoint saved as wav2vec2-large-960h-cv.ckpt by the Jupyter notebook is too large to fit in Github. Therefore, I extract out the state_dict of the model parameters and save it into wav2vec2-large-960h-cv.pt.
 
 ### Task 4
 
